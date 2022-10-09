@@ -1,0 +1,1 @@
+/usr/local/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libuoqueue.so -o ../lib/libuoqueue.so CMakeFiles/uoqueue.dir/rte_ring.cpp.o   -L/home/Trimule/3rdparty/lib  -L/home/Trimule/3rdparty/lib/json  -L/home/Trimule/3rdparty/lib/rdkafka 

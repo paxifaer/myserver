@@ -1,0 +1,22 @@
+{
+    "mysql_setting": {
+        "mysql_user": "",
+        "mysql_password": "",
+        "mysql_db": "",
+        "mysql_host": "",
+        "mysql_port":
+        "mysql_timeout":5
+    },
+    "httpserver_setting":
+    {
+        "host":"",
+        "port":""
+    },
+    "redis_setting":
+    {
+        "host":"",
+        "port":"",
+        "password":""
+    }
+}
+

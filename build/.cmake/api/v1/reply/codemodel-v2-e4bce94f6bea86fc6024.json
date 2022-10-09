@@ -1,0 +1,481 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						9,
+						10,
+						11
+					]
+				},
+				{
+					"build" : "redispool",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "redispool",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "tinyxml2",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "tinyxml2",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "kafka",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "kafka",
+					"targetIndexes" : 
+					[
+						7,
+						12
+					]
+				},
+				{
+					"build" : "queue",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "queue",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "settingParser",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "settingParser",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "dbstruct",
+					"childIndexes" : 
+					[
+						7,
+						8,
+						9
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "dbstruct"
+				},
+				{
+					"build" : "dbstruct/dbstruct",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 6,
+					"source" : "dbstruct/dbstruct",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "dbstruct/sqlcommand",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 7,
+					"source" : "dbstruct/sqlcommand",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "dbstruct/newstructure",
+					"childIndexes" : 
+					[
+						10,
+						11,
+						12
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 0,
+					"source" : "dbstruct/newstructure"
+				},
+				{
+					"build" : "dbstruct/newstructure/UpdateCalllog",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 8,
+					"source" : "dbstruct/newstructure/UpdateCalllog",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "dbstruct/newstructure/GetCallRecord",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 9,
+					"source" : "dbstruct/newstructure/GetCallRecord",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "dbstruct/newstructure/CallBack",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 10,
+					"source" : "dbstruct/newstructure/CallBack",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						6,
+						9
+					],
+					"name" : "UO_TOOLS",
+					"targetIndexes" : 
+					[
+						9,
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "redis",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "TinyXMLLIB",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "uokafka",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						7,
+						12
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "uoqueue",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "settingParser",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "dbstruct",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "updatedb",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "UpdateCalllog",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "GetCallRecord",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						12
+					],
+					"name" : "CallBack",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 12,
+					"id" : "CallBack::@3dd6e0559e983568e2f0",
+					"jsonFile" : "target-CallBack-Release-5789384ec7354c9681ab.json",
+					"name" : "CallBack",
+					"projectIndex" : 10
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "GetCallRecord::@53f802ccedb73349db3e",
+					"jsonFile" : "target-GetCallRecord-Release-9dea8fcd8171b4b443e3.json",
+					"name" : "GetCallRecord",
+					"projectIndex" : 9
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "UpdateCalllog::@4838e52bf64f56ce78a0",
+					"jsonFile" : "target-UpdateCalllog-Release-20399702017378f96e0a.json",
+					"name" : "UpdateCalllog",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "dbstruct::@4a603d23e66cec9b8dc1",
+					"jsonFile" : "target-dbstruct-Release-7a815c9d03ce672176bd.json",
+					"name" : "dbstruct",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "redis::@4c9129b72330c4172b63",
+					"jsonFile" : "target-redis-Release-1a8d577e3f4c9ab1d07d.json",
+					"name" : "redis",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "redisclient::@4c9129b72330c4172b63",
+					"jsonFile" : "target-redisclient-Release-4bf57d88cbcc85df1952.json",
+					"name" : "redisclient",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "settingParser::@3de34314d486dbe9a238",
+					"jsonFile" : "target-settingParser-Release-2479d964e31fad017ede.json",
+					"name" : "settingParser",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "test_kafka::@075a633b61e5ba74ec8b",
+					"jsonFile" : "target-test_kafka-Release-99f047b709eb4ad14adc.json",
+					"name" : "test_kafka",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "tinyxml::@224f3e4ea043f4f452f2",
+					"jsonFile" : "target-tinyxml-Release-4dedd1ba362d8db5d45a.json",
+					"name" : "tinyxml",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tooltest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tooltest-Release-81f80da8600745dca513.json",
+					"name" : "tooltest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trimule::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trimule-Release-4a35c2504f2830db495a.json",
+					"name" : "trimule",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trimule_copyfile::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trimule_copyfile-Release-973b18bd949a29a7c0df.json",
+					"name" : "trimule_copyfile",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "uokafka::@075a633b61e5ba74ec8b",
+					"jsonFile" : "target-uokafka-Release-fd3e93b0d08370b3c89f.json",
+					"name" : "uokafka",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "uoqueue::@d63f5f69c5a9088733ed",
+					"jsonFile" : "target-uoqueue-Release-98c2b27c4bf46b3aa739.json",
+					"name" : "uoqueue",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "updatedb::@2db80e5ada060509595b",
+					"jsonFile" : "target-updatedb-Release-3ffdda60172e41411f1f.json",
+					"name" : "updatedb",
+					"projectIndex" : 7
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/Trimule/build",
+		"source" : "/home/Trimule"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

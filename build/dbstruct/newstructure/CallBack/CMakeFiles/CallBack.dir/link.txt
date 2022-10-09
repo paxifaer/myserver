@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCallBack.a CMakeFiles/CallBack.dir/CallBack.cpp.o CMakeFiles/CallBack.dir/CmDataCache.cpp.o CMakeFiles/CallBack.dir/HttpRequester.cpp.o
+/usr/bin/ranlib libCallBack.a

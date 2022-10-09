@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/Trimule/queue/rte_ring.cpp
+iostream
+-
+rte_ring.h
+/home/Trimule/queue/rte_ring.h
+
+/home/Trimule/queue/rte_ring.h
+string
+-
+mutex
+-
+queue
+-
+condition_variable
+-
+

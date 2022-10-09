@@ -1,0 +1,1 @@
+/usr/local/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libuokafka.so -o ../lib/libuokafka.so CMakeFiles/uokafka.dir/simplewrapkafka.cpp.o   -L/home/Trimule/3rdparty/lib  -L/home/Trimule/3rdparty/lib/json  -L/home/Trimule/3rdparty/lib/rdkafka 
