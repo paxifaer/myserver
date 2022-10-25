@@ -175,37 +175,6 @@ int cinatra_websocket()
     return 0;
 }
 
-int ttt()
-{
-    int max_thread_num = std::thread::hardware_concurrency();
-    http_server server(max_thread_num);
-    server.listen("0.0.0.0", "8080");
-    server.set_http_handler<GET, POST>("/", [&](request &req, response &res)
-                                       {
-        res.set_delay(true);
-        std::string ip("192.168.10.52_");
-        std::string uuid;
-        auto con = req.get_conn<http_server::type>();
-        RWSeparate2<http_server::type>::inst().Add2Map(con, uuid);
-        SimpleWrapKafka::inst().Add2Kafka("mytest", ip + uuid + "_testfromcinatra");
-
-        // std::string filename("/home/uncle_orange/BorayProduct/tools/www/1616579920094476511.jpg");
-        // auto file = std::make_shared<std::ifstream>(filename, std::ios::binary);
-        // std::string content;
-        // const size_t size = 5 * 1024 * 1024;
-        // content.resize(size);
-        // file->read(&content[0], size);
-        // int64_t read_len = (int64_t)file->gcount();
-
-        // if (read_len < size)
-        //     content.resize(read_len);
-        // res.set_status_and_content(status_type::ok, std::move(content),req_content_type::multipart);
-
-        res.set_status_and_content(status_type::ok, "multipart finished"); });
-    server.enable_timeout(false);
-    server.run();
-    return 0;
-}
 
 int cinatra_uploadfile()
 {
@@ -288,77 +257,6 @@ void ThreadSafePriorityQueueTest()
     std::cout << b.a << std::endl;
 }
 
-void testKafkaCinatra()
-{
-    auto f = []() -> std::tuple<int, double, std::string>
-    {
-        return std::make_tuple(1, 2.3, "456");
-    };
-    std::string brokers("192.168.10.52:9092");
-    std::string topic("mytest");
-    std::string groupid("g1");
-
-    SimpleWrapKafka::inst().CreateProducer(brokers, topic);
-    SimpleWrapKafka::inst().CreateConsumer(brokers, topic, groupid, [](std::string message)
-                                           { RWSeparate2<http_server::type>::inst().ResponseClient(message); });
-    // SimpleWrapKafka::inst().Add2Kafka(topic,"wrap2");
-    // RWSeparate::inst().printt();
-    cinatra_uploadfile();
-    // ttt();
-    // net();
-    std::cout << "haha" << std::endl;
-    auto [x, y, z] = f();
-    std::cout << x << y << z << std::endl;
-}
-
-void printnow()
-{
-    auto tt = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-    struct tm *ptm = localtime(&tt);
-    char date[60] = {0};
-    sprintf(date, "%d-%02d-%02d      %02d:%02d:%02d",
-            (int)ptm->tm_year + 1900, (int)ptm->tm_mon + 1, (int)ptm->tm_mday,
-            (int)ptm->tm_hour, (int)ptm->tm_min, (int)ptm->tm_sec);
-    std::cout << date << std::endl;
-}
-
-void testtimermanager()
-{
-    struct TTT
-    {
-        std::string name;
-        int id;
-    };
-
-    auto fun1 = [](TTT t)
-    {
-        std::cout << t.name.c_str() << '\t' << t.id << std::endl;
-    };
-    TimerManager<TTT> *a = TimerManager<TTT>::GetInstance();
-    sleep(10);
-
-    a->AddAlarm(std::chrono::system_clock::now() + std::chrono::seconds(20), TTT{"run fun1", 20}, std::bind(fun1, TTT{"run fun1", 10}));
-    a->AddAlarm(std::chrono::system_clock::now() + std::chrono::seconds(5), TTT{"run fun1", 3}, std::bind(fun1, TTT{"run fun1", 3}));
-    a->AddAlarmInterval(std::chrono::system_clock::now() + std::chrono::seconds(5), TTT{"run fun1interval", 3}, std::bind(fun1, TTT{"run fun1interval", 3}), std::chrono::seconds(1));
-
-    for (int i = 0; i < 5; i++)
-        a->AddAlarm(std::chrono::system_clock::now() + std::chrono::seconds(10), TTT{"run fun1", i}, std::bind(fun1, TTT{"run fun1", i}));
-
-    // a->DeleteAlarm(std::bind([](const TTT& t, int id){ return t.id == id; },std::placeholders::_1, 3));
-
-    auto fun2 = [](int a, int b)
-    {
-        std::cout << a << '\t' << b << std::endl;
-    };
-    TimerManager<TTT> *b = TimerManager<TTT>::GetInstance();
-    for (int i = 5; i < 10; i++)
-        b->AddAlarm(std::chrono::system_clock::now() + std::chrono::seconds(2), TTT{"123", i}, std::bind(fun2, i, i + 1));
-    b->AddAlarm(std::chrono::system_clock::now() + std::chrono::seconds(2), TTT{"123", 5}, std::bind(fun2, 5, 6));
-    b->AddAlarm(std::chrono::system_clock::now() + std::chrono::seconds(2), TTT{"123", 6}, std::bind(fun2, 6, 7));
-    b->DeleteAlarm(std::bind([](const TTT &t, int id)
-                             { return t.id == id; },
-                             std::placeholders::_1, 5));
-}
 
 #include "tools/memorypool.hpp"
 void testmemorypool()
