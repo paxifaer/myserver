@@ -962,14 +962,6 @@ void tset_opsnssl()
 #include "ormpp/mysql.hpp"
 void wdtest_ormpp()
 {
-    // "mysql_setting": {
-    //     "mysql_user": "emi_ai",
-    //     "mysql_password": "Sinicnet123456",
-    //     "mysql_db": "ai",
-    //     "mysql_host": "rm-2ze4h4gd92r731iapeo.mysql.rds.aliyuncs.com",
-    //     "mysql_port":3306,
-    //     "mysql_timeout":5
-    // },
 
     ormpp::dbng<ormpp::mysql> mysqlclient;
     // settingParser mysql_example;
