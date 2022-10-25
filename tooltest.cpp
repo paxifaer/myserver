@@ -518,7 +518,7 @@ void testPThreadPool()
 // void testormpp()
 // {
 //     ormpp::dbng<ormpp::mysql> mysql;
-//     mysql.connect("rm-2ze4h4gd92r731iapeo.mysql.rds.aliyuncs.com", "emi_ai", "Sinicnet123456", "ai");
+//     mysql.connect("127.0.0.1", "emi_ai", "Sinicnet123456", "ai");
 
 //     // auto res = mysql.query<aicall_tts_file_cache>("id = 5622");
 //     auto res = mysql.query<user>(" id = 1 ");
@@ -690,7 +690,7 @@ void testQueueTypeThreadPool()
 //     std::vector<person> v{p1, p2};
 
 //     dbng<mysql> mysql;
-//     mysql.connect("172.17.214.17", "root", "123456", "test_db");
+//     mysql.connect("127.0.0.1", "root", "123456", "test_db");
 //     // mysql.connect("0.0.0.0", "root", "123456", "test_db");
 //     mysql.create_datatable<person>();
 
@@ -856,21 +856,7 @@ void tset_opsnssl()
     std::cout << md5_string;
 }
 
-#include "ormpp/dbng.hpp"
-#include "ormpp/mysql.hpp"
-void wdtest_ormpp()
-{
 
-    ormpp::dbng<ormpp::mysql> mysqlclient;
-    // settingParser mysql_example;
-    // sqlconnect conne = mysql_example.GetSettinghParser("conf/config.json");
-
-    mysqlclient.connect("rm-2ze4h4gd92r731iapeo.mysql.rds.aliyuncs.com", "emi_ai", "Sinicnet123456", "ai", 5, 3306);
-
-    auto res = mysqlclient.query<std::tuple<std::string>>("select id  from calllog limit 1");
-
-    std::cout << std::get<0>(res[0]) << std::endl;
-}
 
 int main()
 {
@@ -895,6 +881,5 @@ int main()
     // testtinyxml();
     // testwd_testcurl();
     // tset_opsnssl();
-    wdtest_ormpp();
     return 0;
 }
